@@ -1,4 +1,4 @@
-Function: main/0 hola
+Function: main/0 
 Constants: None, 5
 Locals: x, y
 Globals: print
