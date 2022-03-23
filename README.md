@@ -1,1 +1,1 @@
-# proyecto-Lenguajes-de-programaci-n-2022-1
+# proyecto-Lenguajes-de-programación-2022-1
