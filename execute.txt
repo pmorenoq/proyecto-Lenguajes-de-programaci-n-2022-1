@@ -1,6 +1,6 @@
 in console:
 
-cd C:\Users\pamor\Desktop\universidad\S1\Lenguajes de programing\jcoco 		//cambiar la libreria de acceso
+cd C:\Users\*carpeta donde esta alojada el .casm* 		//cambiar la libreria de acceso
 
 java -jar JCoCo.jar *archivo.casm*		//ejecutar programa
 
