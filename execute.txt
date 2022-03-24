@@ -1,0 +1,6 @@
+in console:
+
+cd C:\Users\pamor\Desktop\universidad\S1\Lenguajes de programing\jcoco 		//cambiar la libreria de acceso
+
+java -jar JCoCo.jar demo.casm		//ejecutar programa
+
