@@ -1,7 +1,99 @@
-Function: main/0 
-Constants: None, 5
-Locals: x, y
-Globals: print
+Function: main/0
+Constants: None, "introduzca un numero entero", "introduzca otro numero entero", "Que desea hacer con los valores", "1. sumarlos", "2. restarlos", "3. multiplicarlos", "4. dividirlos", 1, 2, 3, 4
+Locals: x, y, z
+Globals: print, int, input
 BEGIN
-
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    1
+          LOAD_GLOBAL                    2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          STORE_FAST                     0
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     2
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    1
+          LOAD_GLOBAL                    2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          STORE_FAST                     1
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     3
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     4
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     5
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     6
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     7
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    1
+          LOAD_GLOBAL                    2
+          CALL_FUNCTION                  0
+          CALL_FUNCTION                  1
+          STORE_FAST                     2
+          LOAD_FAST                      2
+          LOAD_CONST                     8
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_ADD               
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+label00:  LOAD_FAST                      2
+          LOAD_CONST                     9
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_SUBTRACT          
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+label01:  LOAD_FAST                      2
+          LOAD_CONST                    10
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_MULTIPLY          
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+label02:  LOAD_FAST                      2
+          LOAD_CONST                    11
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_FAST                      1
+          BINARY_TRUE_DIVIDE       
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_CONST                     0
+          RETURN_VALUE             
+label03:  LOAD_CONST                     0
+          RETURN_VALUE             
 END
