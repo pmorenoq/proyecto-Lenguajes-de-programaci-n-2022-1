@@ -1,7 +1,24 @@
-Function: main/0 
-Constants: None, 5
-Locals: x, y
-Globals: print
+Function: main/1
+Constants: None, 1, 0
+Locals: n
+Globals: main
 BEGIN
-
+          LOAD_FAST                      0
+          LOAD_CONST                     1
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+          LOAD_FAST                      0
+          LOAD_CONST                     2
+          COMPARE_OP                     2
+          COMPARE_OP                     2
+label00:  LOAD_CONST                     1
+          RETURN_VALUE             
+label01:  LOAD_FAST                      0
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          LOAD_CONST                     1
+          BINARY_SUBTRACT          
+          CALL_FUNCTION                  1
+          BINARY_MULTIPLY          
+          RETURN_VALUE             
 END
