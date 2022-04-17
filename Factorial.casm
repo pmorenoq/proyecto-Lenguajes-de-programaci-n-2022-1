@@ -21,4 +21,4 @@ label01:  LOAD_FAST                      0
           CALL_FUNCTION                  1
           BINARY_MULTIPLY          
           RETURN_VALUE             
-END
+END 
