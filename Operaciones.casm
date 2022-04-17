@@ -1,63 +1,62 @@
 Function: main/0
-Constants: None, 1, 2, 3, 4, "No se selecciono ninguna operacion"
-Locals: x, y, z
+Constants: None, 1, 2, "los numeros son:", "suma:", "resta:", "multiplicacion:", "division:"
+Locals: x, y
 Globals: print
 BEGIN
           LOAD_CONST                     1
           STORE_FAST                     0
           LOAD_CONST                     2
           STORE_FAST                     1
-          LOAD_CONST                     1
-          STORE_FAST                     2
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     3
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_FAST                      0
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
           LOAD_FAST                      1
-          LOAD_CONST                     1
-          COMPARE_OP                     2
-          POP_JUMP_IF_FALSE              label00
+          CALL_FUNCTION                  1
+          POP_TOP                  
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     4
+          CALL_FUNCTION                  1
+          POP_TOP                  
           LOAD_GLOBAL                    0
           LOAD_FAST                      0
           LOAD_FAST                      1
           BINARY_ADD               
           CALL_FUNCTION                  1
           POP_TOP                  
-          LOAD_CONST                     0
-          RETURN_VALUE             
-label00:  LOAD_FAST                      2
-          LOAD_CONST                     2
-          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     5
+          CALL_FUNCTION                  1
+          POP_TOP                  
           LOAD_GLOBAL                    0
           LOAD_FAST                      0
           LOAD_FAST                      1
           BINARY_SUBTRACT          
           CALL_FUNCTION                  1
           POP_TOP                  
-          LOAD_CONST                     0
-          RETURN_VALUE             
-label01:  LOAD_FAST                      2
-          LOAD_CONST                     3
-          COMPARE_OP                     2
-          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     6
+          CALL_FUNCTION                  1
+          POP_TOP                  
           LOAD_GLOBAL                    0
           LOAD_FAST                      0
           LOAD_FAST                      1
           BINARY_MULTIPLY          
           CALL_FUNCTION                  1
           POP_TOP                  
-          LOAD_CONST                     0
-          RETURN_VALUE             
-label02:  LOAD_FAST                      2
-          LOAD_CONST                     4
-          COMPARE_OP                     2
-          COMPARE_OP                     2
+          LOAD_GLOBAL                    0
+          LOAD_CONST                     7
+          CALL_FUNCTION                  1
+          POP_TOP                  
           LOAD_GLOBAL                    0
           LOAD_FAST                      0
           LOAD_FAST                      1
           BINARY_TRUE_DIVIDE       
-          CALL_FUNCTION                  1
-          POP_TOP                  
-          LOAD_CONST                     0
-          RETURN_VALUE             
-label03:  LOAD_GLOBAL                    0
-          LOAD_CONST                     5
           CALL_FUNCTION                  1
           POP_TOP                  
           LOAD_CONST                     0
