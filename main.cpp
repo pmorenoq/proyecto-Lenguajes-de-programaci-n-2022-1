@@ -19,26 +19,26 @@ int main(){
 
     switch(cont){
         case 1:
-        archivo.read("TrianguloPascal.casm",line,code);
-        system("java -jar JCoCo.jar TrianguloPascal.casm");
+        archivo.readFactorial("TrianguloPascal.casm",line,code);
+        system("java -jar JCoCo.jar tmp.casm");
         a=false;
         break;
 
         case 2:
-        archivo.read("Factorial.casm", line,code);
-        system("java -jar JCoCo.jar Factorial.casm");
+        archivo.readFactorial("Factorial.casm",line,code);
+        system("java -jar JCoCo.jar tmp.casm");
         a=false;
         break;
 
         case 3:
-        archivo.read("Operaciones.casm",line,code);
+        archivo.readOperaciones("Operaciones.casm",line,code);
         system("java -jar JCoCo.jar tmp.casm");
         a=false;
         break;
 
         case 4:
-        archivo.read("Matrices.casm",line,code);
-        system("java -jar JCoCo.jar lista.casm");
+        archivo.readFactorial("Matrices.casm",line,code);
+        system("java -jar JCoCo.jar tmp.casm");
         a=false;
         break; 
 
@@ -49,5 +49,4 @@ int main(){
     }
     return 0;
 }
-
 
