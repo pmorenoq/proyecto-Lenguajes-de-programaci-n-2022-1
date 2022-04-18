@@ -1,51 +1,65 @@
 #include <iostream>
+#include "Files.h"
 #include <fstream>
-#include <string>
 #include <stdio.h>
+#include <string>
 
-using namespace std;
-
-string filename;
-string line;
-int cont = 1;
-
-int main(){
-
-    while(cont>0){
-
-        cout<<"insert filename:"<<endl;
-        cin>>filename;
-        ifstream file(filename);
+std::string Files::read(std::string filename, std::string line, std::string code){
+    std::string aux;
+    char index;
+    std::ifstream file(filename);
         
         if(file.is_open()){
             
             while(getline(file,line)){
-                cout<<line<<endl;
+                aux = line + "\n";
+                code = code + aux;
             }
             file.close();
-            cont--;
-        }
-        else{
-            cout<<"file is ot open, please insert a correct file"<<endl;
-        }
-    }
-    if(filename=="pascal.casm"){
-        system("java -jar JCoCo.jar pascal.casm");
-    }
-    else if(filename=="factorial.casm"){
-        system("java -jar JCoCo.jar factorial.casm");
-    }
-    else if(filename=="operaciones.casm"){
-         system("java -jar JCoCo.jar operaciones.casm");
-    }
-    else if(filename=="lista,casm"){
-        system("java -jar JCoCo.jar lista.casm");
-    }
-   
-    
-    
-    return 0;
-}
 
+        std::cout<<"ingresa el primer numero: "<<std::endl;
+        std::cin>>index;
+        for(int i = 0; i < code.size();i++){
+            if(code[i]=='h'){
+                code[i] = index;
+            }
+            else{
+                continue;
+            }
+        
+        }
+
+        std::cout<<"ingresa el segundo numero: "<<std::endl;
+        std::cin>>index;
+        for(int i = 0; i < code.size();i++){
+            if(code[i]=='k'){
+                code[i] = index;
+            }
+            else{
+                continue;
+            }
+        }
+        std::cout<<code<<std::endl;
+        
+        }
+
+        else{
+            std::cout<<"error file is ot open"<<std::endl;
+        
+        }
+
+    std::string filenametemp("tmp.casm");
+    std::fstream file_out;
+
+    file_out.open(filenametemp, std::ios_base::out);
+    if (!file_out.is_open()) {
+        std::cout << "failed to open " << filenametemp << '\n';
+    } else {
+        file_out << code << std::endl;
+        std::cout << "Done Writing!" << std::endl;
+    }
+    return code;
+
+}
 
 
