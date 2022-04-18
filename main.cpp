@@ -1,65 +1,53 @@
 #include <iostream>
-#include "Files.h"
 #include <fstream>
-#include <stdio.h>
 #include <string>
+#include <stdio.h>
+#include "Menu.h"
+#include "Files.h"
 
-std::string Files::read(std::string filename, std::string line, std::string code){
-    std::string aux;
-    char index;
-    std::ifstream file(filename);
-        
-        if(file.is_open()){
-            
-            while(getline(file,line)){
-                aux = line + "\n";
-                code = code + aux;
-            }
-            file.close();
+std::string code;
+std::string line;
+int cont;
+bool a = true;
+Menu interfaz;
+Files archivo; 
 
-        std::cout<<"ingresa el primer numero: "<<std::endl;
-        std::cin>>index;
-        for(int i = 0; i < code.size();i++){
-            if(code[i]=='h'){
-                code[i] = index;
-            }
-            else{
-                continue;
-            }
-        
-        }
+int main(){
+    while(a){
+    interfaz.interfaz_usuario();
+    std::cin>>cont;
 
-        std::cout<<"ingresa el segundo numero: "<<std::endl;
-        std::cin>>index;
-        for(int i = 0; i < code.size();i++){
-            if(code[i]=='k'){
-                code[i] = index;
-            }
-            else{
-                continue;
-            }
-        }
-        std::cout<<code<<std::endl;
-        
-        }
+    switch(cont){
+        case 1:
+        archivo.read("TrianguloPascal.casm",line,code);
+        system("java -jar JCoCo.jar TrianguloPascal.casm");
+        a=false;
+        break;
 
-        else{
-            std::cout<<"error file is ot open"<<std::endl;
-        
-        }
+        case 2:
+        archivo.read("Factorial.casm", line,code);
+        system("java -jar JCoCo.jar Factorial.casm");
+        a=false;
+        break;
 
-    std::string filenametemp("tmp.casm");
-    std::fstream file_out;
+        case 3:
+        archivo.read("Operaciones.casm",line,code);
+        system("java -jar JCoCo.jar tmp.casm");
+        a=false;
+        break;
 
-    file_out.open(filenametemp, std::ios_base::out);
-    if (!file_out.is_open()) {
-        std::cout << "failed to open " << filenametemp << '\n';
-    } else {
-        file_out << code << std::endl;
-        std::cout << "Done Writing!" << std::endl;
+        case 4:
+        archivo.read("Matrices.casm",line,code);
+        system("java -jar JCoCo.jar lista.casm");
+        a=false;
+        break; 
+
+        default:
+        std::cout << "\nEl numero de opcion escrito no es valido\n" << std::endl;
+
     }
-    return code;
-
+    }
+    return 0;
 }
 
 
