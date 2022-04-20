@@ -1,56 +1,44 @@
-Function: main/0
-Constants: None, "Entre un numero: ", 0, "Introducir un numero valido", 1, -1
-Locals: n, numbers, k
-Globals: int, input, print, exit, range, append
+Function: pascal/1
+Constants: None, 1, 0
+Locals: n, line, k
+Globals: range, max, append, int
 BEGIN
-          LOAD_GLOBAL                    0
-          LOAD_GLOBAL                    1
-          LOAD_CONST                     1
-          CALL_FUNCTION                  1
-          CALL_FUNCTION                  1
-          STORE_FAST                     0
           LOAD_FAST                      0
-          LOAD_CONST                     2
-          COMPARE_OP                     1
-          POP_JUMP_IF_FALSE        label00
-          LOAD_GLOBAL                    2
-          LOAD_CONST                     3
-          CALL_FUNCTION                  1
-          POP_TOP
-          LOAD_GLOBAL                    3
-          CALL_FUNCTION                  0
-          POP_TOP
-          JUMP_FORWARD             label00
-label00:  LOAD_CONST                     4
+          LOAD_CONST                     1
+          BINARY_SUBTRACT
+          STORE_FAST                     0
+          LOAD_CONST                     1
           BUILD_LIST                     1
           STORE_FAST                     1
-          SETUP_LOOP               label03
-          LOAD_GLOBAL                    4
-          LOAD_CONST                     4
+          SETUP_LOOP               label02
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
           LOAD_FAST                      0
+          LOAD_CONST                     2
           CALL_FUNCTION                  2
+          CALL_FUNCTION                  1
           GET_ITER
-label01:  FOR_ITER                 label02
+label00:  FOR_ITER                 label01
           STORE_FAST                     2
           LOAD_FAST                      1
-          LOAD_ATTR                      5
+          LOAD_ATTR                      2
+          LOAD_GLOBAL                    3
           LOAD_FAST                      1
-          LOAD_CONST                     5
+          LOAD_FAST                      2
           BINARY_SUBSCR
           LOAD_FAST                      0
           LOAD_FAST                      2
           BINARY_SUBTRACT
           BINARY_MULTIPLY
           LOAD_FAST                      2
-          BINARY_FLOOR_DIVIDE
+          LOAD_CONST                     1
+          BINARY_ADD
+          BINARY_TRUE_DIVIDE
+          CALL_FUNCTION                  1
           CALL_FUNCTION                  1
           POP_TOP
-          JUMP_ABSOLUTE            label01
-label02:  POP_BLOCK
-label03:  LOAD_GLOBAL                    2
-          LOAD_FAST                      1
-          CALL_FUNCTION                  1
-          POP_TOP
-          LOAD_CONST                     0
+          JUMP_ABSOLUTE            label00
+label01:  POP_BLOCK
+label02:  LOAD_FAST                      1
           RETURN_VALUE
 END
