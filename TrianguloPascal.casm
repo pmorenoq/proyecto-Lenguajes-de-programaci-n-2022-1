@@ -1,18 +1,54 @@
-Function: main/0 
-Constants: None, 5
-Locals: x, y
-Globals: print
+Function: main/0
+Constants: None, "Enter a row number: ", 0, "Introducir un numero valido", 1, -1
+Locals: n, numbers, k
+Globals: int, input, print, exit, range, append
 BEGIN
+          LOAD_GLOBAL                    0
+          LOAD_GLOBAL                    1
           LOAD_CONST                     1
+          CALL_FUNCTION                  1
+          CALL_FUNCTION                  1
           STORE_FAST                     0
           LOAD_FAST                      0
-          LOAD_CONST                     1
-          BINARY_ADD
+          LOAD_CONST                     2
+          COMPARE_OP                     1
+          POP_JUMP_IF_FALSE        label00
+          LOAD_GLOBAL                    2
+          LOAD_CONST                     3
+          CALL_FUNCTION                  1
+          POP_TOP
+          LOAD_GLOBAL                    3
+          CALL_FUNCTION                  0
+          POP_TOP
+          JUMP_FORWARD             label00
+label00:  LOAD_CONST                     4
+          BUILD_LIST                     1
           STORE_FAST                     1
-          LOAD_GLOBAL                    0
+          SETUP_LOOP               label03
+          LOAD_GLOBAL                    4
+          LOAD_CONST                     4
+          LOAD_FAST                      0
+          CALL_FUNCTION                  2
+          GET_ITER
+label01:  FOR_ITER                 label02
+          STORE_FAST                     2
           LOAD_FAST                      1
-          LOAD_CONST                     1
-          BINARY_ADD
+          LOAD_ATTR                      5
+          LOAD_FAST                      1
+          LOAD_CONST                     5
+          BINARY_SUBSCR
+          LOAD_FAST                      0
+          LOAD_FAST                      2
+          BINARY_SUBTRACT
+          BINARY_MULTIPLY
+          LOAD_FAST                      2
+          BINARY_FLOOR_DIVIDE
+          CALL_FUNCTION                  1
+          POP_TOP
+          JUMP_ABSOLUTE            label01
+label02:  POP_BLOCK
+label03:  LOAD_GLOBAL                    2
+          LOAD_FAST                      1
           CALL_FUNCTION                  1
           POP_TOP
           LOAD_CONST                     0
