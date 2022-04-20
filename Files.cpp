@@ -31,6 +31,12 @@ std::string Files::readOperaciones(std::string filename, std::string line, std::
 
         std::cout<<"ingresa el segundo numero: "<<std::endl;
         std::cin>>index;
+
+                while (index == 0){
+                    std::cout<<"ingrese un numero diferente de cero"<<std::endl;
+                    std::cin>>index;
+                }
+
         for(int i = 0; i < code.size();i++){
             if(code[i]=='k'){
                 code[i] = index;
@@ -77,6 +83,11 @@ std::string Files::readFactorial(std::string filename, std::string line, std::st
 
         std::cout<<"ingresa un numero numero: "<<std::endl;
         std::cin>>index;
+
+                if (index == 0){
+                    index = 1;
+                }
+
         for(int i = 0; i < code.size();i++){
             if(code[i]=='h'){
                 code[i] = index;
