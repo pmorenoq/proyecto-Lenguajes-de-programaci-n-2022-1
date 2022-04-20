@@ -1,5 +1,5 @@
 Function: main/0
-Constants: None, "Enter a row number: ", 0, "Introducir un numero valido", 1, -1
+Constants: None, "Entre un numero: ", 0, "Introducir un numero valido", 1, -1
 Locals: n, numbers, k
 Globals: int, input, print, exit, range, append
 BEGIN
